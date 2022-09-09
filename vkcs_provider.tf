@@ -11,7 +11,7 @@ provider "vkcs" {
     username = "fate@vocadev.ru"
 
     # The password of the account
-    password = "YOUR_PASSWORD"
+    password = "Jkui9OpL"
 
     # The tenant token can be taken from the project Settings tab - > API keys.
     # Project ID will be our token.

@@ -1,9 +1,9 @@
 data "vkcs_compute_flavor" "compute" {
-  name = "Standart-4-8-100"
+  name = "Standard-4-8-10"
 }
 
 data "vkcs_images_image" "compute" {
-  name = "cml2"
+  name = "cml240_rev2"
 }
 
 resource "vkcs_compute_instance" "compute" {
@@ -17,17 +17,8 @@ resource "vkcs_compute_instance" "compute" {
     source_type           = "image"
     destination_type      = "volume"
     volume_type           = "ceph-ssd"
-    volume_size           = 20
+    volume_size           = 30
     boot_index            = 0
-    delete_on_termination = true
-  }
-
-  block_device {
-    source_type           = "blank"
-    destination_type      = "volume"
-    volume_type           = "ceph-ssd"
-    volume_size           = 80
-    boot_index            = 1
     delete_on_termination = true
   }
 
