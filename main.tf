@@ -1,9 +1,9 @@
 data "vkcs_compute_flavor" "compute" {
-  name = "Basic-1-2-20"
+  name = "Standart-4-8-100"
 }
 
 data "vkcs_images_image" "compute" {
-  name = "Ubuntu-18.04-Standard"
+  name = "cml2"
 }
 
 resource "vkcs_compute_instance" "compute" {
@@ -17,7 +17,7 @@ resource "vkcs_compute_instance" "compute" {
     source_type           = "image"
     destination_type      = "volume"
     volume_type           = "ceph-ssd"
-    volume_size           = 8
+    volume_size           = 20
     boot_index            = 0
     delete_on_termination = true
   }
@@ -26,7 +26,7 @@ resource "vkcs_compute_instance" "compute" {
     source_type           = "blank"
     destination_type      = "volume"
     volume_type           = "ceph-ssd"
-    volume_size           = 8
+    volume_size           = 80
     boot_index            = 1
     delete_on_termination = true
   }
