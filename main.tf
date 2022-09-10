@@ -1,5 +1,5 @@
 data "vkcs_compute_flavor" "compute" {
-  name = "Standard-4-8-10"
+  name = "Standard-2-2"
 }
 
 data "vkcs_images_image" "compute" {
